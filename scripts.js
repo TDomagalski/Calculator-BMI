@@ -3,6 +3,11 @@ var height = prompt("Podaj swój wzrost w cm","");
 var bmi;
 var heightM;
 
+weight = parseFloat(weight, 10);
+weight = parseInt(weight, 10);
+height = parseFloat(height, 10);
+height = parseInt(height, 10);
+
 function change() {
     heightM = height * 0.01;
 }
@@ -12,6 +17,7 @@ function bmiCheck() {
     bmi = weight/(heightM*heightM)
 }
 bmiCheck();
+bmi = bmi.toFixed(2);
 
 if (bmi < 15) {
     document.write("Jesteś WYCHUDZONY!")
